@@ -15,7 +15,6 @@ const projects: ProjectProps[] = [
       "/assets/lighthouse/lighthouse5.jpeg",
       "/assets/lighthouse/lighthouse6.jpeg",
       "/assets/lighthouse/lighthouse7.jpeg",
-      "/assets/lighthouse/lighthouse8.jpeg",
       "/assets/lighthouse/lighthouse9.jpeg",
       "/assets/lighthouse/lighthouse10.jpeg",
       "/assets/lighthouse/lighthouse11.jpeg",
@@ -90,7 +89,7 @@ const projects: ProjectProps[] = [
     category: "Personal Branding & Digital Illustration",
     mediaType: "image",
     thumbnail: "/assets/Project6.jpeg",
-    media: "assets/Project6.jpeg",
+    media: "/assets/Project6.jpeg",
     challenge:
       "To create a personalized brand message that builds audience connection.",
     solution:
@@ -103,7 +102,7 @@ const projects: ProjectProps[] = [
     category: "Visual Texture & Atmospheric Design",
     mediaType: "image",
     thumbnail: "/assets/Project7.jpeg",
-    media: "assets/Project7.jpeg",
+    media: "/assets/Project7.jpeg",
     challenge:
       "To create a premium seasonal greeting with a divine, sophisticated feel.",
     solution:
@@ -179,6 +178,33 @@ const projects: ProjectProps[] = [
       "Falling snow, animated typography, and gentle motion brought the festive story to life.",
     services: ["Motion Graphics", "Video Editing", "Festive Brand Storytelling"],
   },
+  {
+  id: 13,
+  title: "Wize Creation Rebrand",
+  category: "Visual Identity Rebrand",
+  mediaType: "image",
+  media: [
+    "/assets/wizecreation/wize1.jpg",
+    "/assets/wizecreation/wize2.jpg",
+    "/assets/wizecreation/wize3.jpg",
+    "/assets/wizecreation/wize4.jpg",
+    "/assets/wizecreation/wize5.jpg",
+    "/assets/wizecreation/wize6.jpg",
+    "/assets/wizecreation/wize7.jpg",
+    "/assets/wizecreation/wize8.jpg",
+    "/assets/wizecreation/wize9.jpg",
+  ],
+  thumbnail: "/assets/wizecreation/wizeCreation.jpg",
+  challenge:
+    "To redefine the brand identity of Wize Creation with a more premium, modern, and visually cohesive direction that reflects growth and creative professionalism.",
+  solution:
+    "I developed a refined visual identity system using a royal purple, aqua green, and soft gold palette paired with elegant typography to create a bold and modern creative studio presence.",
+  services: [
+    "Brand Identity Design",
+    "Logo Redesign",
+    "Creative Direction",
+  ],
+},
 ];
 
 export default projects;

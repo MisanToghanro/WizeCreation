@@ -19,25 +19,37 @@ const GalleryDetailPage = () => {
 
   return (
   <div className="min-h-screen">
-<Link 
+<Link
   href="/Projects"
-  className="inline-flex items-center gap-2 px-4 py-2 mt-8 ml-4 md:ml-8 rounded-md font-medium text-[#07153B] 
-             bg-white border border-[#657A97]/20 shadow-sm transition-all duration-300 
-             hover:shadow-md hover:bg-[#07153B] hover:text-white group"
-> 
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    fill="none" 
-    viewBox="0 0 24 24" 
-    strokeWidth={2} 
-    stroke="currentColor" 
-    className="w-5 h-5 transition-transform group-hover:-translate-x-1"
+  className="
+    inline-flex items-center gap-2
+    mt-8 ml-6 md:ml-10 
+    text-(--color-aqua)/70
+    hover:text-(--color-accent)
+    transition duration-300
+    group
+  "
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={2}
+    stroke="currentColor"
+    className="w-5 h-5 transition-transform duration-300 group-hover:-translate-x-1"
   >
-    <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+    />
   </svg>
 
-  <span className="text-sm md:text-base">Back to Gallery</span>
+  <span className="uppercase tracking-[0.15em] text-md font-medium">
+    Back to Gallery
+  </span>
 </Link>
+
 <GalleryDetail project={project} />;
   </div>
   )

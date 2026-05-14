@@ -1,16 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Montserrat:wght@400;500;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap');
 
 @import "tailwindcss";
 
+:root {
+  /* Colors */
+  --color-primary: #5B2C83;
+  --color-aqua: #2EC4B6;
+  --color-accent: #D4A857;
+  --color-white: #FFFFFF;
 
+  /* Fonts */
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Poppins', sans-serif;
+}
 
-/* Assign Montserrat to all headings */
+/* Typography system */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-heading);
 }
 
-/* Assign Atkinson Hyperlegible to all paragraphs and body text */
 p, span, li, a {
-  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-family: var(--font-body);
 }
+

@@ -5,41 +5,84 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    quote: "Wizzy’s Graphics took my vision for a luxury perfume ad and turned it into a masterpiece. The attention to detail and the premium feel of the design perfectly matched my brand's identity.",
-    author: "Ebi, CEO of Ebi’s Fragrance"
+    quote:
+      "Wizzy’s Graphics took my vision for a luxury perfume ad and turned it into a masterpiece. The attention to detail and the premium feel of the design perfectly matched my brand's identity.",
+    author: "Ebi, CEO of Ebi’s Fragrance",
   },
   {
-    quote: "I needed a flyer that explained my product clearly while still looking professional. Wizzy delivered exactly what I needed with a clean, vibrant design that our customers love.",
-    author: "Manager, Chrysolite Home Care"
+    quote:
+      "I needed a flyer that explained my product clearly while still looking professional. Wizzy delivered exactly what I needed with a clean, vibrant design that our customers love.",
+    author: "Manager, Chrysolite Home Care",
   },
   {
-    quote: "Wizzy’s Graphics provided us with a clean, powerful visual identity that perfectly represents our mission in renewable energy. The professional layout and modern typography have significantly improved how corporate clients perceive our brand. If you want a designer who understands corporate branding, Wizzy is the one.",
-    author: "CEO, Light House Renewable Energy"
+    quote:
+      "Wizzy’s Graphics provided us with a clean, powerful visual identity that perfectly represents our mission in renewable energy.",
+    author: "CEO, Light House Renewable Energy",
   },
   {
-    quote: "Wizzy designs are top notch graphics design. His work is modern, his animations are smooth, and he actually understands what a brand needs to grow. 10/10 service!",
-    author: "Churchill, CR Software Engineering (FUPRE)"
-  }
+    quote:
+      "Wizzy designs are top notch graphics design. His work is modern, his animations are smooth, and he actually understands what a brand needs to grow.",
+    author: "Churchill, CR Software Engineering (FUPRE)",
+  },
 ];
 
 const Testimonials: React.FC = () => {
   return (
-    <section className="w-full bg-[#07153B] py-12  px-6 md:px-8">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-white text-3xl md:text-4xl font-bold mb-8">
-          What Clients Say
-        </h2>
-        <div className="grid gap-8 grid-cols-1 md:grid-cols-3">
+    <section className="w-full bg-white py-24 px-6 md:px-8">
+
+      <div className="max-w-6xl mx-auto">
+
+        {/* Heading */}
+        <div className="text-center mb-14">
+
+          <p className="uppercase tracking-[0.25em] text-xs text-(--color-accent) mb-3">
+            Testimonials
+          </p>
+
+          <h2 className="text-(--color-primary) text-4xl font-bold">
+            What Clients Say
+          </h2>
+
+          <p className="text-(--color-primary)/70 mt-4 max-w-2xl mx-auto">
+            Real feedback from brands and businesses I’ve collaborated with.
+          </p>
+
+        </div>
+
+        {/* Cards */}
+        <div className="grid gap-8 grid-cols-1 md:grid-cols-2">
+
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition"
+              className="
+                rounded-2xl p-8
+                bg-linear-to-br
+                from-(--color-primary)
+                to-(--color-aqua)
+                border border-(--color-accent)/30
+                shadow-lg
+                transition duration-300
+                hover:-translate-y-1
+                hover:shadow-xl
+              "
             >
-              <p className="text-[#07153B] text-sm mb-4">{testimonial.quote}</p>
-              <p className="text-[#657A97] text-xs font-medium">{testimonial.author}</p>
+
+              <p className="text-white leading-relaxed text-sm md:text-base mb-6">
+                “{testimonial.quote}”
+              </p>
+
+              <div className="w-12 h-px bg-(--color-accent) mb-4"></div>
+
+              <p className="text-(--color-accent) text-sm font-medium tracking-wide">
+                {testimonial.author}
+              </p>
+
             </div>
           ))}
+
         </div>
+
       </div>
     </section>
   );

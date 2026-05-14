@@ -12,106 +12,158 @@ const Header = () => {
     { label: "Contact Me", href: "/Contact" },
   ];
 
-  return (
-    <header className="sticky top-0 z-50 w-full bg-white border-b border-[#657A97]/30">
-      
-      {/* Desktop Navigation */}
-      <div className="hidden md:flex justify-between items-center px-6 py-3 max-w-7xl mx-auto">
-        
-        {/* Logo */}
-        <Link href="/" className="flex items-center">
-          <Image
-            src="/assets/Logo.jpeg"
-            alt="portfolio logo"
-            width={90}
-            height={30}
-            priority
-            className="rounded-sm object-contain transition-all duration-300 ease-out hover:scale-105 hover:opacity-90 bg-white"
-          />
-        </Link>
 
-        {/* Desktop Nav Links */}
-        <nav className="flex gap-8">
-          {navLinks.map(({ label, href }) => (
-            <Link
-              key={href}
-              href={href}
-              onClick={() => setMenu(false)}
-              className="relative font-medium text-[#07153B] hover:text-[#657A97] group transition duration-300"
-            >
-              {label}
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#657A97] group-hover:w-full transition-all duration-300"></span>
-            </Link>
-          ))}
-        </nav>
+  const NewHeader = () => {
+     return(
+<header className="absolute top-0 left-0 z-50 w-full ">
+  <div className="flex items-center justify-between px-6 py-6 md:px-12">
 
-      </div>
+    {/* Logo */}
+<Link
+  href="/"
+  className="
+    relative group
+    rounded-2xl overflow-hidden
+  "
+>
+  <div
+    className="
+      absolute inset-0
+      bg-linear-to-r
+      from-(--color-primary)
+      to-(--color-aqua)
+      opacity-0
+      blur-xl
+      transition duration-500
+      group-hover:opacity-40
+    "
+  />
 
-      {/* Mobile Navigation */}
-      <div className="flex flex-col md:hidden">
-        {/*  logo + hamburger */}
-        <div className="flex justify-between items-center px-5 py-4">
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/assets/Logo.jpeg"
-              alt="portfolio logo"
-              width={90}
-              height={30}
-              className="object-contain rounded-sm transition-all duration-300 ease-out hover:scale-105 hover:opacity-90"
-              priority
-            />
-          </Link>
+  <div
+    className="
+      relative
+      bg-white/10
+      backdrop-blur-md
+      border border-white/10
+      rounded-2xl
+      px-3 py-2
+    "
+  >
+    <Image
+      src="/assets/wizecreation/WizeCreation3.jpg"
+      alt="logo"
+      width={95}
+      height={40}
+      className="object-contain rounded-lg"
+    />
+  </div>
+</Link>
 
-          {/* Hamburger Button */}
-          <button onClick={() => setMenu(!menu)} className="text-[#07153B]">
-            <svg
-              className={`w-7 h-7 transition-transform duration-300 ${
-                menu ? "rotate-90" : "rotate-0"
-              }`}
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              {menu ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        <div
-          className={`overflow-hidden transition-all duration-300 ease-in-out ${
-            menu ? "max-h-96 opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-2"
-          }`}
+    {/* Desktop Nav */}
+    <nav
+      className="
+        hidden md:flex items-center gap-6
+        px-6 py-3
+        rounded-full
+        bg-[#2EC4B6]/20
+        backdrop-blur-md
+        border border-white/20
+        shadow-lg shadow-black/10
+      "
+    >
+      {navLinks.map(({ label, href }) => (
+        <Link
+          key={href}
+          href={href}
+          className="
+            text-white uppercase tracking-[0.15em]
+            text-sm font-medium
+            transition duration-300
+            hover:text-(--color-accent)
+          "
         >
-          <nav className="flex flex-col gap-6 px-6 pb-6 pt-2">
-            {navLinks.map(({ label, href }) => (
-              <Link
-                key={href}
-                href={href}
-                onClick={() => setMenu(false)}
-                className="font-medium text-[#07153B] hover:text-[#657A97] transition"
-              >
-                {label}
-              </Link>
-            ))}
-          </nav>
-        </div>
-      </div>
-    </header>
+          {label}
+        </Link>
+      ))}
+    </nav>
+
+    {/* Mobile Hamburger */}
+    <button
+      onClick={() => setMenu(!menu)}
+      className="
+        md:hidden
+        p-2 rounded-full
+        bg-[#2EC4B6]/20
+        backdrop-blur-md
+        border border-white/20
+        text-white
+      "
+    >
+      {menu ? (
+   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+</svg>
+      ) : (
+ <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+</svg>
+      )}
+
+    </button>
+  </div>
+
+  {/* Mobile Menu */}
+  <div
+    className={`
+      md:hidden overflow-hidden
+      transition-all duration-300 ease-in-out
+      ${
+        menu
+          ? "max-h-96 opacity-100"
+          : "max-h-0 opacity-0"
+      }
+    `}
+  >
+    <nav
+      className="
+        mx-6 mt-2
+        flex flex-col gap-6
+        rounded-2xl
+        bg-[#2EC4B6]/20
+        backdrop-blur-md
+        border border-white/20
+        px-6 py-6
+      "
+    >
+      {navLinks.map(({ label, href }) => (
+        <Link
+          key={href}
+          href={href}
+          onClick={() => setMenu(false)}
+          className="
+            text-white uppercase
+            tracking-[0.15em]
+            text-sm font-medium
+            transition duration-300
+            hover:text-[#5B2C83]
+          "
+        >
+          {label}
+        </Link>
+      ))}
+    </nav>
+  </div>
+</header>
+     )
+  }
+
+  return (
+    <>
+        
+  <NewHeader/>
+    </>
+
+   
   );
 };
 
