@@ -1,43 +1,57 @@
 const services = [
-  "DESIGN",
-  "BRANDING",
-  "DEVELOPMENT",
+  "DISCOVERY",
   "STRATEGY",
-  "PRODUCT DESIGN",
-  "MOTION GRAPHIC",
-  "ART DIRECTION",
+  "DESIGN",
+  "DELIVERY",
 ];
 
-const ServicesCarousel = () => {
+const ServicesGrid = () => {
   return (
+    <div className="py-20 px-6">
+      <div className="max-w-7xl mx-auto">
 
-    <div className="hidden md:block relative overflow-hidden bg-[#07153B] py-6 mt-12 border-y border-[#657A97]/30">
-      
-      <div className="flex animate-marquee items-center gap-16 w-max will-change-transform">
-        {[...services].map((service, index) => (
-          <div key={index} className="flex items-center gap-16 shrink-0">
-            <span className="text-white text-3xl font-bold tracking-tighter uppercase whitespace-nowrap">
-              {service}
-            </span>
-            <span className="text-[#657A97] text-2xl">✦</span>
-          </div>
-        ))}
+        {/* Desktop grid */}
+        <div className="hidden md:grid grid-cols-4 gap-x-10 gap-y-14">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="
+                pt-6 border-t border-(--color-accent)
+                flex flex-col gap-3
+                group cursor-pointer
+                transition duration-300
+                hover:-translate-y-1
+              "
+            >
+              <h3 className="text-white text-lg font-semibold tracking-[0.2em] uppercase group-hover:text-(--color-accent)">
+                {service}
+              </h3>
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile scroll version */}
+        <div className="flex md:hidden gap-6 overflow-x-auto scrollbar-hide">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="
+                min-w-40
+                pt-6 border-t border-(--color-accent)
+                flex flex-col gap-3
+              "
+            >
+              <h3 className="text-white text-sm font-semibold tracking-[0.2em] uppercase">
+                {service}
+              </h3>
+            </div>
+          ))}
+        </div>
+
       </div>
-
-      <style jsx>{`
-        @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-
-        .animate-marquee {
-          display: flex;
-          animation: marquee 45s linear infinite;
-        }
-      `}</style>
     </div>
   );
 };
 
-export default ServicesCarousel;
+export default ServicesGrid;
 
