@@ -32,7 +32,7 @@ const Contact: React.FC = () => {
 
           <p className="text-white/75 leading-relaxed max-w-2xl mx-auto">
             Have a project in mind or want to elevate your brand identity?
-            Reach out through WhatsApp, Instagram, or Email.
+            Reach out through the following socials
           </p>
 
         </div>

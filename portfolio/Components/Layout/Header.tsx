@@ -141,7 +141,7 @@ const Header = () => {
           href={href}
           onClick={() => setMenu(false)}
           className="
-            text-white uppercase
+            text-(--color-accent)/90 uppercase
             tracking-[0.15em]
             text-sm font-medium
             transition duration-300
