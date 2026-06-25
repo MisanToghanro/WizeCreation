@@ -103,7 +103,7 @@ const Home = () => {
                  <div className="absolute -top-4 -left-4 w-full h-full bg-blue-900 rounded-xl opacity-10"></div>
                  
                  <Image
-                   src="/assets/ProfilePic3.jpeg"
+                   src="/assets/profile1.jpeg"
                    alt="Wizzy's Profile"
                    width={420}
                    height={420}

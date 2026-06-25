@@ -5,7 +5,7 @@ import {
   FaEnvelope,
   FaFacebookF,
 } from "react-icons/fa";
-
+import Image from "next/image";
 import { FaXTwitter } from "react-icons/fa6";
 import Testimonials from "@/Components/TestimonialCards";
 
@@ -18,24 +18,63 @@ const Contact: React.FC = () => {
 
       {/* Contact Section */}
       <div className="w-full max-w-4xl mx-auto text-center px-6 py-24">
+{/* Heading */}
+<div className="mb-16 flex flex-col items-center text-center">
 
-        {/* Heading */}
-        <div className="mb-12">
+  <p className="uppercase tracking-[0.25em] text-xs text-(--color-accent) mb-3">
+    Contact
+  </p>
 
-          <p className="uppercase tracking-[0.25em] text-xs text-(--color-accent) mb-3">
-            Contact
-          </p>
+  <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+    Get in Touch
+  </h1>
 
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Get in Touch
-          </h1>
+  {/* Featured Image */}
+  <div className="relative mb-8 group">
 
-          <p className="text-white/75 leading-relaxed max-w-2xl mx-auto">
-            Have a project in mind or want to elevate your brand identity?
-            Reach out through the following socials
-          </p>
+    {/* Glow */}
+    <div className="
+      absolute -inset-2
+      rounded-2xl
+      bg-linear-to-br
+      from-(--color-primary)
+      to-(--color-aqua)
+      blur-xl
+      opacity-30
+      group-hover:opacity-50
+      transition
+    " />
 
-        </div>
+    <Image
+      src="/assets/wizecreationset.jpeg"
+      alt="WizeCreation Brand Preview"
+      width={460}
+      height={460}
+      priority
+      className="
+        relative
+        rounded-2xl
+        object-cover
+        border border-white/10
+        shadow-2xl
+        transition duration-500
+        group-hover:scale-[1.02]
+      "
+    />
+    <p className="mt-4 text-sm uppercase tracking-[0.2em] text-(--color-accent)">
+  WizeCreation Brand Identity
+</p>
+
+  </div>
+
+  <p className="max-w-2xl text-white/80 text-lg leading-relaxed">
+    Have a project in mind or looking to elevate your brand?
+    Let's create something memorable together.
+  </p>
+
+  <p className="text-white/80 text-md">Reach out through any of the platforms below.</p>
+
+</div>
 
         {/* Contact Buttons */}
         <div className="flex flex-col md:flex-row justify-center gap-5">

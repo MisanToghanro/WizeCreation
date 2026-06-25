@@ -36,7 +36,7 @@ const About = () => {
             <div className="absolute -top-4 -left-4 w-full h-full bg-(--color-aqua)/10 rounded-xl"></div>
 
             <Image
-              src="/assets/ProfilePic2.jpeg"
+              src="/assets/profile2.jpeg"
               alt="Wizzy's Profile"
               width={420}
               height={420}
