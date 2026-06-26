@@ -51,7 +51,7 @@ const Home = () => {
               <FaWhatsapp />
             </a>
             <a
-              href="https://www.instagram.com/wizzys_graphics"
+              href="https://www.instagram.com/wize_creation"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-(--color-accent) transition hover:-translate-y-1"

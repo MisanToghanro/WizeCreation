@@ -48,7 +48,7 @@ const Footer = () => {
   </a>
 
   <a
-    href="https://www.instagram.com/wizzys_graphics"
+   href="https://www.instagram.com/wize_creation"
     target="_blank"
     rel="noopener noreferrer"
     className="
