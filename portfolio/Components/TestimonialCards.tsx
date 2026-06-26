@@ -6,22 +6,22 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     quote:
-      "Wizzy’s Graphics took my vision for a luxury perfume ad and turned it into a masterpiece. The attention to detail and the premium feel of the design perfectly matched my brand's identity.",
+      "WizeCreation took my vision for a luxury perfume ad and turned it into a masterpiece. The attention to detail and the premium feel of the design perfectly matched my brand's identity.",
     author: "Ebi, CEO of Ebi’s Fragrance",
   },
   {
     quote:
-      "I needed a flyer that explained my product clearly while still looking professional. Wizzy delivered exactly what I needed with a clean, vibrant design that our customers love.",
+      "I needed a flyer that explained my product clearly while still looking professional. WizeCreation delivered exactly what I needed with a clean, vibrant design that our customers love.",
     author: "Manager, Chrysolite Home Care",
   },
   {
     quote:
-      "Wizzy’s Graphics provided us with a clean, powerful visual identity that perfectly represents our mission in renewable energy.",
+      "WizeCreation provided us with a clean, powerful visual identity that perfectly represents our mission in renewable energy.",
     author: "CEO, Light House Renewable Energy",
   },
   {
     quote:
-      "Wizzy designs are top notch graphics design. His work is modern, his animations are smooth, and he actually understands what a brand needs to grow.",
+      "WizeCreation designs are top notch graphics design. His work is modern, his animations are smooth, and he actually understands what a brand needs to grow.",
     author: "Churchill, CR Software Engineering (FUPRE)",
   },
 ];

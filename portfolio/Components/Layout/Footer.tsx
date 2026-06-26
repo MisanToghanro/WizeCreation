@@ -9,8 +9,6 @@ import {
   FaFacebookF,
 } from "react-icons/fa";
 
-import { FaXTwitter } from "react-icons/fa6";
-
 const Footer = () => {
   return (
     <footer className="bg-(--color-primary)/90  text-white py-8">
@@ -73,19 +71,6 @@ const Footer = () => {
     "
   >
     <FaFacebookF />
-  </a>
-
-  <a
-    href="https://x.com/wizecreation"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="
-      hover:text-(--color-accent)
-      hover:-translate-y-1
-      transition duration-300
-    "
-  >
-    <FaXTwitter />
   </a>
 
   <a

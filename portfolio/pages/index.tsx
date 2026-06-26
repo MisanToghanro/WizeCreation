@@ -1,7 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-
-import ServicesCarousel from "@/Components/ServicesCarousel";
 import {
   FaInstagram,
   FaWhatsapp,
@@ -9,7 +7,6 @@ import {
   FaFacebookF,
 } from "react-icons/fa";
 
-import { FaXTwitter } from "react-icons/fa6";
 import ServicesGrid from "@/Components/ServicesCarousel";
 
 const Home = () => {
@@ -79,19 +76,6 @@ const Home = () => {
                 "
               >
                 <FaFacebookF />
-              </a>
-            
-              <a
-                href="https://x.com/wizecreation"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="
-                  hover:text-(--color-accent)
-                  hover:-translate-y-1
-                  transition duration-300
-                "
-              >
-                <FaXTwitter />
               </a>
           </div>
         </div>

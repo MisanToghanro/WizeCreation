@@ -6,7 +6,7 @@ import {
   FaFacebookF,
 } from "react-icons/fa";
 import Image from "next/image";
-import { FaXTwitter } from "react-icons/fa6";
+
 import Testimonials from "@/Components/TestimonialCards";
 
 const Contact: React.FC = () => {
@@ -162,27 +162,6 @@ const Contact: React.FC = () => {
             "
                         >
                           Facebook <FaFacebookF />
-                        </a>
-                      
-                        <a
-                          href="https://x.com/wizecreation"
-                          target="_blank"
-                          rel="noopener noreferrer"
-              className="
-              flex items-center justify-center gap-3
-              px-8 py-4 rounded-xl
-              bg-white/10
-              backdrop-blur-md
-              border border-white/10
-              text-white
-              font-medium
-              transition duration-300
-              hover:bg-white/20
-              hover:border-(--color-accent)/40
-              hover:-translate-y-1
-            "
-                        >
-                         Twitter <FaXTwitter />
                         </a>
 
         </div>
