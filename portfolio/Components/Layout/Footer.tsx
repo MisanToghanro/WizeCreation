@@ -103,7 +103,7 @@ const Footer = () => {
 
         {/* Social / Copyright */}
         <p className="text-sm text-white-70 text-center md:text-right">
-          &copy; {new Date().getFullYear()} Wizzy's Graphics. All rights reserved.
+          &copy; {new Date().getFullYear()} WizeCreation. All rights reserved.
         </p>
 
       </div>
